@@ -1,0 +1,84 @@
+int index =0;
+        	boolean found =false;
+        	Book b=null;
+        	for(Book book : list) {
+        		if(Bname==book.getBookName()) {
+        			found = true;
+        			index = list.indexOf(book);
+        			b = book;
+        			break;
+        		}
+        	}
+        	if(found ==true) {
+        		System.out.println("Enter the book Name :");
+        		String BName =sc.nextLine();
+        		
+        		System.out.println("Enter the book Author Name :");
+        		String BAuthor =sc.nextLine();
+        		
+        		System.out.println("Enter the book Language :");
+        		String Language = sc.next();
+        		
+        		System.out.println("Enter the book price :");
+        		int Bprice = sc.nextInt();
+        		
+        		System.out.println("Enter the book Rating  :");
+        		float Brating = sc.nextFloat();
+        		
+        		
+        		b.setBookName(BName);
+        		b.setAuthorName(BAuthor);
+        		b.setLanguage(Language);
+        		b.setPrice(Bprice);
+        		b.setRatings(Brating);
+        		
+        		list.set(index, b);
+        		System.out.println("=========================================================");
+        		System.out.println("Book Information updated Sucessfully!!");
+        	}
+        	else {
+        		System.out.println("Book Name does note Exist!!");
+        	}
+        	System.out.println("=============================================================");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int flag=0;
+ 		System.out.println("==================================================================================================");
+
+ 		for(Book b:list)
+ 		{
+ 			if(b.getBookName()==bookName)
+ 			{   
+ 				flag=1;
+ 			System.out.println("Author Name: "+b.getAuthorName()+" "+"Language: " +b.getLanguage()+" "+"Book Price: "+b.getPrice()+" "+"Rating: "+b.getRatings());
+ 				
+ 			}
+ 		}
+ 		
+ 		if(flag==0)
+ 			System.out.println("Book Name Not Exist !!");
+ 		System.out.println("==================================================================================================");
+ 	
